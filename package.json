@@ -1,0 +1,37 @@
+{
+  "name": "central-mandados-sjp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0 -p 3000",
+    "build": "next build",
+    "start": "next start -H 0.0.0.0 -p 3000",
+    "postinstall": "node -e \"const fs=require('fs');const src='node_modules/maplibre-gl/dist/maplibre-gl-worker.mjs';if(fs.existsSync(src)){fs.mkdirSync('public/workers',{recursive:true});fs.writeFileSync('public/workers/maplibre-gl-worker.js',fs.readFileSync(src,'utf8').replace(/\\n\\/\\/# sourceMappingURL=.*$/,''));}\""
+  },
+  "dependencies": {
+    "@mapbox/vector-tile": "^3.0.0",
+    "earcut": "^3.2.4",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.468.0",
+    "maplibre-gl": "^6.17.0",
+    "next": "^15.1.6",
+    "pbf": "^5.1.2",
+    "pmtiles": "^4.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/earcut": "^3.0.0",
+    "@types/google.maps": "^3.66.10",
+    "@types/leaflet": "^1.9.16",
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.4",
+    "@types/react-dom": "^19.0.2",
+    "@types/three": "^0.187.0",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2"
+  }
+}
